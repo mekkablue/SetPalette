@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14109" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none">
+    <dependencies>
+        <deployment version="1080" identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14109"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="SetPalette">
+            <connections>
+                <outlet property="allOffButton" destination="gc0-wY-aVz" id="nEB-dp-fDJ"/>
+                <outlet property="allOnButton" destination="Q4f-bI-cdz" id="q4k-N7-h7W"/>
+                <outlet property="dialog" destination="1" id="QoV-hz-lAN"/>
+                <outlet property="reapplyButton" destination="Ibb-Wt-s5x" id="sGu-US-scv"/>
+                <outlet property="ss01field" destination="fn7-o2-fJz" id="Kma-vL-fFG"/>
+                <outlet property="ss02field" destination="BUb-Wr-6yK" id="RkC-5s-tWn"/>
+                <outlet property="ss03field" destination="9fL-Fc-yfC" id="PVL-iC-c9T"/>
+                <outlet property="ss04field" destination="Tbi-hc-59K" id="OWA-al-2ce"/>
+                <outlet property="ss05field" destination="Enw-qX-R9z" id="eyT-w7-q4b"/>
+                <outlet property="ss06field" destination="I7J-ne-ize" id="ddt-5n-6rr"/>
+                <outlet property="ss07field" destination="lIY-mX-w8M" id="xZN-6I-UQU"/>
+                <outlet property="ss08field" destination="wlM-rz-NX0" id="OO8-M0-mqc"/>
+                <outlet property="ss09field" destination="aya-y4-zDM" id="Itg-kb-dU2"/>
+                <outlet property="ss10field" destination="KyF-tN-tcy" id="gWM-2X-iip"/>
+                <outlet property="ss11field" destination="a59-f9-iy6" id="ThQ-77-Ho8"/>
+                <outlet property="ss12field" destination="Xzg-Xa-GHO" id="I4o-JZ-FB2"/>
+                <outlet property="ss13field" destination="5ua-Mx-1Hq" id="1cw-U8-K82"/>
+                <outlet property="ss14field" destination="6cr-0R-qNT" id="1aa-BN-Bi0"/>
+                <outlet property="ss15field" destination="Cd2-fI-8SL" id="bwD-zk-za8"/>
+                <outlet property="ss16field" destination="R7d-nd-n6w" id="fIt-iQ-4Yr"/>
+                <outlet property="ss17field" destination="O1P-d9-ndh" id="JvL-zC-I2L"/>
+                <outlet property="ss18field" destination="2Fh-xI-hAI" id="jMv-0h-qcQ"/>
+                <outlet property="ss19field" destination="cL8-hS-XPY" id="JlI-TG-ZVG"/>
+                <outlet property="ss20field" destination="emj-95-EnH" id="RN0-Bp-CGL"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView misplaced="YES" id="1" customClass="GSPaletteView">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" setsMaxLayoutWidthAtFirstLayout="YES" id="xmJ-rn-hjB">
+                    <rect key="frame" x="6" y="130" width="141" height="11"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <textFieldCell key="cell" controlSize="mini" sendsActionOnEndEditing="YES" title="Activate these Stylistic Sets:" id="HCc-E1-WPp">
+                        <font key="font" metaFont="miniSystem"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" misplaced="YES" id="fn7-o2-fJz">
+                    <rect key="frame" x="7" y="107" width="33" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="01" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="itX-o9-PmQ">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="Sl9-f5-6lE"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="BUb-Wr-6yK">
+                    <rect key="frame" x="7" y="88" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="02" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="l0M-VH-6WC">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="H9e-Xf-Ip6"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="9fL-Fc-yfC">
+                    <rect key="frame" x="7" y="69" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="03" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="brU-bk-5KV">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="dqv-B9-Qfu"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Tbi-hc-59K">
+                    <rect key="frame" x="7" y="50" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="04" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="Gyr-OX-rKE">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="nsZ-GE-bCh"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Enw-qX-R9z">
+                    <rect key="frame" x="7" y="31" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="05" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="AnJ-d2-qws">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="Deb-se-fRr"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="I7J-ne-ize">
+                    <rect key="frame" x="42" y="107" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="06" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="SVT-H0-wCu">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="L4e-YN-Cbh"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="lIY-mX-w8M">
+                    <rect key="frame" x="42" y="88" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="07" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="MHi-v4-iC8">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="Pyh-zq-V4S"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="wlM-rz-NX0">
+                    <rect key="frame" x="42" y="69" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="08" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="Sl7-4h-U40">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="JcT-fd-XSr"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="aya-y4-zDM">
+                    <rect key="frame" x="42" y="50" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="09" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="KW5-5d-rR7">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="HHo-wJ-Stf"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="KyF-tN-tcy">
+                    <rect key="frame" x="42" y="31" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="10" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="qCL-st-efG">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="Hqe-WT-bdo"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="a59-f9-iy6">
+                    <rect key="frame" x="78" y="107" width="33" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="11" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="YsT-KM-DoL">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="vEt-Hf-26C"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Xzg-Xa-GHO">
+                    <rect key="frame" x="78" y="88" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="12" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="3L9-pp-zds">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="mZ9-CW-Q9O"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="5ua-Mx-1Hq">
+                    <rect key="frame" x="78" y="69" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="13" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="z83-xn-3bs">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="OGW-U9-bwc"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="6cr-0R-qNT">
+                    <rect key="frame" x="78" y="50" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="14" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="8vI-HL-Vgq">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="BTk-xb-YAG"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Cd2-fI-8SL">
+                    <rect key="frame" x="78" y="31" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="15" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="XOi-kj-lrK">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="suU-D9-D21"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="R7d-nd-n6w">
+                    <rect key="frame" x="112" y="107" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="16" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="alO-Fc-X4d">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="6jd-G3-Gdt"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="O1P-d9-ndh">
+                    <rect key="frame" x="112" y="88" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="17" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="U3W-HC-kbA">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="HUG-YG-VWY"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="2Fh-xI-hAI">
+                    <rect key="frame" x="112" y="69" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="18" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="qaz-Sz-4Nw">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="vOY-Ok-lDF"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="cL8-hS-XPY">
+                    <rect key="frame" x="112" y="50" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="19" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="AP7-ZZ-ihx">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="wFf-CJ-Au2"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="emj-95-EnH">
+                    <rect key="frame" x="112" y="31" width="34" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="check" title="20" bezelStyle="regularSquare" imagePosition="left" alignment="right" controlSize="mini" state="on" inset="2" id="NQX-pZ-sn0">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" size="9" name=".AppleSystemUIFont"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="setStylisticSet:" target="-2" id="kGh-NQ-QBZ"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Ibb-Wt-s5x">
+                    <rect key="frame" x="83" y="10" width="62" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Activate" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HMO-Az-058">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="applySets:" target="-2" id="vg1-Np-6G1"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="Q4f-bI-cdz">
+                    <rect key="frame" x="4" y="10" width="37" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="On" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="px4-72-wWf">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="allOn:" target="-2" id="ESS-Oq-BEE"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" misplaced="YES" id="gc0-wY-aVz">
+                    <rect key="frame" x="40" y="10" width="38" height="16"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Off" bezelStyle="rounded" alignment="center" controlSize="mini" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Yyp-KB-WPD">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="miniSystem"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="allOff:" target="-2" id="p1q-iw-zWu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <connections>
+                <outlet property="_controller" destination="-2" id="jOT-R9-oyt"/>
+            </connections>
+            <point key="canvasLocation" x="139" y="203.5"/>
+        </customView>
+    </objects>
+</document>
