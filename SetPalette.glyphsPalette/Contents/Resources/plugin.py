@@ -44,6 +44,7 @@ class SetPalette (PalettePlugin):
 	allOffButton = objc.IBOutlet()
 	reapplyButton = objc.IBOutlet()
 	
+	@objc.python_method
 	def settings(self):
 		self.name = Glyphs.localize({
 			'en': u'Set Palette',
@@ -77,6 +78,7 @@ class SetPalette (PalettePlugin):
 		
 		self.loadNib('IBdialog', __file__)
 	
+	@objc.python_method
 	def start(self):
 		self.ss01field.setIntValue_(Glyphs.defaults["com.mekkablue.SetPalette.ss01"])
 		self.ss02field.setIntValue_(Glyphs.defaults["com.mekkablue.SetPalette.ss02"])
@@ -102,10 +104,12 @@ class SetPalette (PalettePlugin):
 		# Adding a callback for the 'GSUpdateInterface' event
 		#Glyphs.addCallback(self.update, UPDATEINTERFACE)
 	
+	@objc.python_method
 	def __del__(self):
 		#Glyphs.removeCallback(self.update)
 		pass
-
+	
+	@objc.python_method
 	def update( self, sender ):
 		# Extract font from sender
 		font = sender.object()
@@ -160,6 +164,7 @@ class SetPalette (PalettePlugin):
 	def applySets_( self, sender ):
 		self.updateFeatures()
 	
+	@objc.python_method
 	def updateFeatures(self):
 		font = Glyphs.font
 		if font.currentTab:
@@ -171,12 +176,14 @@ class SetPalette (PalettePlugin):
 				else:
 					self.activateFeature(featureTag, font.currentTab)
 	
+	@objc.python_method
 	def updateTab( self, editTab ):
 		editTab.graphicView().reflow()
 		editTab.graphicView().layoutManager().updateActiveLayer()
 		editTab._updateFeaturePopup()
 		editTab.updatePreview()
 	
+	@objc.python_method
 	def activateFeature( self, featureTag, editTab ):
 		try:
 			if not featureTag in editTab.selectedFeatures():
@@ -188,7 +195,8 @@ class SetPalette (PalettePlugin):
 			print e
 			print traceback.format_exc()
 			return False
-			
+	
+	@objc.python_method
 	def deactivateFeature( self, featureTag, editTab ):
 		try:
 			if featureTag in editTab.selectedFeatures():
@@ -201,19 +209,7 @@ class SetPalette (PalettePlugin):
 			print traceback.format_exc()
 			return False
 	
-	
+	@objc.python_method
 	def __file__(self):
 		"""Please leave this method unchanged"""
 		return __file__
-	
-	# Temporary Fix
-	# Sort ID for compatibility with v919:
-	_sortID = 0
-	def setSortID_(self, id):
-		try:
-			self._sortID = id
-		except Exception as e:
-			self.logToConsole( "setSortID_: %s" % str(e) )
-	def sortID(self):
-		return self._sortID
-	
