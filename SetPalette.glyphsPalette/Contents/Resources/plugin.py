@@ -1,4 +1,5 @@
 # encoding: utf-8
+from __future__ import division, print_function, unicode_literals
 
 ###########################################################################################################
 #
@@ -14,6 +15,7 @@
 import objc
 from GlyphsApp import *
 from GlyphsApp.plugins import *
+import traceback
 
 class SetPalette (PalettePlugin):
 	
@@ -129,16 +131,18 @@ class SetPalette (PalettePlugin):
 	# Action triggered by UI
 	@objc.IBAction
 	def setStylisticSet_( self, sender ):
-		if Glyphs.font.currentTab:
+		editTab = Glyphs.font.currentTab
+		if editTab:
 			setNumber = int(sender.title())
 			featureTag = "ss%02i" % setNumber
 			# Store value coming in from dialog
 			setPref = 'com.mekkablue.SetPalette.%s' % featureTag
 			Glyphs.defaults[setPref] = sender.intValue()
 			if Glyphs.defaults[setPref]:
-				self.activateFeature(featureTag, Glyphs.font.currentTab)
+				self.activateFeature(featureTag, editTab)
 			else:
-				self.deactivateFeature(featureTag, Glyphs.font.currentTab)
+				self.deactivateFeature(featureTag, editTab)
+			self.updateTab(editTab)
 			# Trigger redraw
 			# self.update(sender)
 	
@@ -167,14 +171,16 @@ class SetPalette (PalettePlugin):
 	@objc.python_method
 	def updateFeatures(self):
 		font = Glyphs.font
-		if font.currentTab:
+		editTab = font.currentTab
+		if editTab:
 			for i in range(1,21):
 				setNumber = "%02i" % i
 				featureTag = "ss%s" % setNumber
 				if Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] == 0:
-					self.deactivateFeature(featureTag, font.currentTab)
+					self.deactivateFeature(featureTag, editTab)
 				else:
-					self.activateFeature(featureTag, font.currentTab)
+					self.activateFeature(featureTag, editTab)
+			self.updateTab(editTab)
 	
 	@objc.python_method
 	def updateTab( self, editTab ):
@@ -186,9 +192,8 @@ class SetPalette (PalettePlugin):
 	@objc.python_method
 	def activateFeature( self, featureTag, editTab ):
 		try:
-			if not featureTag in editTab.selectedFeatures():
-				editTab.selectedFeatures().append(featureTag)
-			self.updateTab(editTab)
+			if not featureTag in editTab.features:
+				editTab.features.append(featureTag)
 			return True
 
 		except Exception as e:
@@ -199,9 +204,8 @@ class SetPalette (PalettePlugin):
 	@objc.python_method
 	def deactivateFeature( self, featureTag, editTab ):
 		try:
-			if featureTag in editTab.selectedFeatures():
-				editTab.selectedFeatures().remove(featureTag)
-			self.updateTab(editTab)
+			if featureTag in editTab.features:
+				editTab.features.remove(featureTag)
 			return True
 
 		except Exception as e:
