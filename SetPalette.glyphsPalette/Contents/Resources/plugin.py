@@ -148,8 +148,8 @@ class SetPalette (PalettePlugin):
 	
 	@objc.IBAction
 	def allOn_( self, sender ):
-		for i in range(1,21):
-			setNumber = "%02i" % i
+		for i in range(20):
+			setNumber = "%02i" % (i+1)
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] = 1
 			eval("self.%sfield"%featureTag).setIntValue_(1)
@@ -157,8 +157,8 @@ class SetPalette (PalettePlugin):
 	
 	@objc.IBAction
 	def allOff_( self, sender ):
-		for i in range(1,21):
-			setNumber = "%02i" % i
+		for i in range(20):
+			setNumber = "%02i" % (i+1)
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] = 0
 			eval("self.%sfield"%featureTag).setIntValue_(0)
