@@ -53,8 +53,6 @@ class SetPalette (PalettePlugin):
 			'de': u'Formatsatz-Palette'
 		})
 		self.dialogName = self.name
-		# Load .nib dialog (without .extension)
-		
 		Glyphs.registerDefaults({
 			"com.mekkablue.SetPalette.ss01": 0,
 			"com.mekkablue.SetPalette.ss02": 0,
@@ -77,7 +75,6 @@ class SetPalette (PalettePlugin):
 			"com.mekkablue.SetPalette.ss19": 0,
 			"com.mekkablue.SetPalette.ss20": 0,
 		})
-		
 		self.loadNib('IBdialog', __file__)
 	
 	@objc.python_method
@@ -103,32 +100,6 @@ class SetPalette (PalettePlugin):
 		self.ss19field.setIntValue_(Glyphs.defaults["com.mekkablue.SetPalette.ss19"])
 		self.ss20field.setIntValue_(Glyphs.defaults["com.mekkablue.SetPalette.ss20"])
 
-		# Adding a callback for the 'GSUpdateInterface' event
-		#Glyphs.addCallback(self.update, UPDATEINTERFACE)
-	
-	@objc.python_method
-	def __del__(self):
-		#Glyphs.removeCallback(self.update)
-		pass
-	
-	@objc.python_method
-	def update( self, sender ):
-		# Extract font from sender
-		font = sender.object()
-
-		# Update the palette
-		if font.currentTab:
-			for i in range(1,21):
-				setNumber = "%02i" % i
-				featureTag = "ss%s" % setNumber
-				if featureTag in font.currentTab.selectedFeatures():
-					pass
-					# turn on checkboxes in palette
-				else:
-					pass
-					# turn off checkboxes in palette
-	
-	# Action triggered by UI
 	@objc.IBAction
 	def setStylisticSet_( self, sender ):
 		editTab = Glyphs.font.currentTab
@@ -143,8 +114,6 @@ class SetPalette (PalettePlugin):
 			else:
 				self.deactivateFeature(featureTag, editTab)
 			self.updateTab(editTab)
-			# Trigger redraw
-			# self.update(sender)
 	
 	@objc.IBAction
 	def allOn_( self, sender ):
@@ -153,7 +122,7 @@ class SetPalette (PalettePlugin):
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] = 1
 			eval("self.%sfield"%featureTag).setIntValue_(1)
-			self.updateFeatures()
+		self.updateFeatures()
 	
 	@objc.IBAction
 	def allOff_( self, sender ):
@@ -162,7 +131,7 @@ class SetPalette (PalettePlugin):
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] = 0
 			eval("self.%sfield"%featureTag).setIntValue_(0)
-			self.updateFeatures()
+		self.updateFeatures()
 	
 	@objc.IBAction
 	def applySets_( self, sender ):
@@ -173,8 +142,8 @@ class SetPalette (PalettePlugin):
 		font = Glyphs.font
 		editTab = font.currentTab
 		if editTab:
-			for i in range(1,21):
-				setNumber = "%02i" % i
+			for i in range(20):
+				setNumber = "%02i" % (i+1)
 				featureTag = "ss%s" % setNumber
 				if Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] == 0:
 					self.deactivateFeature(featureTag, editTab)
