@@ -191,9 +191,9 @@ class SetPalette (PalettePlugin):
 			self.updateTab(editTab)
 			return True
 
-		except Exception, e:
-			print e
-			print traceback.format_exc()
+		except Exception as e:
+			print(e)
+			print(traceback.format_exc())
 			return False
 	
 	@objc.python_method
@@ -204,9 +204,9 @@ class SetPalette (PalettePlugin):
 			self.updateTab(editTab)
 			return True
 
-		except Exception, e:
-			print e
-			print traceback.format_exc()
+		except Exception as e:
+			print(e)
+			print(traceback.format_exc())
 			return False
 	
 	@objc.python_method
