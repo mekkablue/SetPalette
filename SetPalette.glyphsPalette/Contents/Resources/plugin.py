@@ -50,7 +50,7 @@ class SetPalette (PalettePlugin):
 	def settings(self):
 		self.name = Glyphs.localize({
 			'en': u'Set Palette',
-			'de': u'Formatsatz-Palette'
+			'de': u'Formatsatz-Palette',
 		})
 		self.dialogName = self.name
 		Glyphs.registerDefaults({
