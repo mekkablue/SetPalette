@@ -35,7 +35,7 @@ class SetPalette (PalettePlugin):
 		pass
 
 	@objc.IBAction
-	def setStylisticSet_( self, sender ):
+	def setStylisticSet_(self, sender):
 		editTab = Glyphs.font.currentTab
 		if editTab:
 			setNumber = int(sender.title())
@@ -48,23 +48,23 @@ class SetPalette (PalettePlugin):
 			self.updateTab(editTab)
 	
 	@objc.IBAction
-	def allOn_( self, sender ):
+	def allOn_(self, sender):
 		for i in range(20):
-			setNumber = "%02i" % (i+1)
+			setNumber = "%02i" % (i + 1)
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] = 1
 		self.updateFeatures()
 	
 	@objc.IBAction
-	def allOff_( self, sender ):
+	def allOff_(self, sender):
 		for i in range(20):
-			setNumber = "%02i" % (i+1)
+			setNumber = "%02i" % (i + 1)
 			featureTag = "ss%s" % setNumber
 			Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] = 0
 		self.updateFeatures()
 	
 	@objc.IBAction
-	def applySets_( self, sender ):
+	def applySets_(self, sender):
 		self.updateFeatures()
 	
 	@objc.python_method
@@ -75,21 +75,21 @@ class SetPalette (PalettePlugin):
 			for i in range(20):
 				setNumber = "%02i" % (i+1)
 				featureTag = "ss%s" % setNumber
-				if Glyphs.defaults["com.mekkablue.SetPalette.%s"%featureTag] == 0:
+				if Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] == 0:
 					self.deactivateFeature(featureTag, editTab)
 				else:
 					self.activateFeature(featureTag, editTab)
 			self.updateTab(editTab)
 	
 	@objc.python_method
-	def updateTab( self, editTab ):
+	def updateTab(self, editTab):
 		editTab.graphicView().reflow()
 		editTab.graphicView().layoutManager().updateActiveLayer()
 		editTab._updateFeaturePopup()
 		editTab.updatePreview()
 	
 	@objc.python_method
-	def activateFeature( self, featureTag, editTab ):
+	def activateFeature(self, featureTag, editTab):
 		try:
 			if not featureTag in editTab.features:
 				editTab.features.append(featureTag)
@@ -101,7 +101,7 @@ class SetPalette (PalettePlugin):
 			return False
 	
 	@objc.python_method
-	def deactivateFeature( self, featureTag, editTab ):
+	def deactivateFeature(self, featureTag, editTab):
 		try:
 			if featureTag in editTab.features:
 				editTab.features.remove(featureTag)
