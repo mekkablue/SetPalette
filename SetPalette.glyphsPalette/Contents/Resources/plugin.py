@@ -18,17 +18,48 @@ from GlyphsApp.plugins import *
 import traceback
 
 class SetPalette (PalettePlugin):
+	prefID = "com.mekkablue.SetPalette"
 	
 	dialog = objc.IBOutlet()
-
+	ss01 = objc.IBOutlet()
+	ss02 = objc.IBOutlet()
+	ss03 = objc.IBOutlet()
+	ss04 = objc.IBOutlet()
+	ss05 = objc.IBOutlet()
+	ss06 = objc.IBOutlet()
+	ss07 = objc.IBOutlet()
+	ss08 = objc.IBOutlet()
+	ss09 = objc.IBOutlet()
+	ss10 = objc.IBOutlet()
+	ss11 = objc.IBOutlet()
+	ss12 = objc.IBOutlet()
+	ss13 = objc.IBOutlet()
+	ss14 = objc.IBOutlet()
+	ss15 = objc.IBOutlet()
+	ss16 = objc.IBOutlet()
+	ss17 = objc.IBOutlet()
+	ss18 = objc.IBOutlet()
+	ss19 = objc.IBOutlet()
+	ss20 = objc.IBOutlet()
+	
 	@objc.python_method
 	def settings(self):
 		self.name = Glyphs.localize({
-			'en': u'Set Palette',
-			'de': u'Formatsatz-Palette',
+			'en': 'Set Palette',
+			'de': 'Formatsatz-Palette',
 		})
 		self.dialogName = self.name
 		self.loadNib('IBdialog', __file__)
+	
+	@objc.python_method
+	def domain(self, prefName):
+		prefName = prefName.strip().strip(".")
+		return self.prefID + "." + prefName.strip()
+	
+	@objc.python_method
+	def pref(self, prefName):
+		prefDomain = self.domain(prefName)
+		return Glyphs.defaults[prefDomain]
 	
 	@objc.python_method
 	def start(self):
@@ -39,8 +70,8 @@ class SetPalette (PalettePlugin):
 		editTab = Glyphs.font.currentTab
 		if editTab:
 			setNumber = int(sender.title())
-			featureTag = "ss%02i" % setNumber
-			setPref = 'com.mekkablue.SetPalette.%s' % featureTag
+			featureTag = self.ssXX(setNumber)
+			setPref = self.domain(featureTag)
 			if Glyphs.defaults[setPref]:
 				self.activateFeature(featureTag, editTab)
 			else:
@@ -49,18 +80,23 @@ class SetPalette (PalettePlugin):
 	
 	@objc.IBAction
 	def allOn_(self, sender):
-		for i in range(20):
-			setNumber = "%02i" % (i + 1)
-			featureTag = "ss%s" % setNumber
-			Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] = 1
-		self.updateFeatures()
+		self.switchAll(onOff=1)
 	
 	@objc.IBAction
 	def allOff_(self, sender):
+		self.switchAll(onOff=0)
+	
+	@objc.python_method
+	def ssXX(self, setNumber):
+		return f"ss{setNumber:02}"
+	
+	@objc.python_method
+	def switchAll(self, onOff=1):
 		for i in range(20):
-			setNumber = "%02i" % (i + 1)
-			featureTag = "ss%s" % setNumber
-			Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] = 0
+			featureTag = self.ssXX(i+1)
+			Glyphs.defaults[self.domain(featureTag)] = onOff
+			button = getattr(self, featureTag)
+			button.setState_(onOff)
 		self.updateFeatures()
 	
 	@objc.IBAction
@@ -73,9 +109,11 @@ class SetPalette (PalettePlugin):
 		editTab = font.currentTab
 		if editTab:
 			for i in range(20):
-				setNumber = "%02i" % (i+1)
-				featureTag = "ss%s" % setNumber
-				if Glyphs.defaults["com.mekkablue.SetPalette.%s" % featureTag] == 0:
+				featureTag = self.ssXX(i+1)
+				value = self.pref(featureTag)
+				button = getattr(self, featureTag)
+				button.setState_(value)
+				if value == 0:
 					self.deactivateFeature(featureTag, editTab)
 				else:
 					self.activateFeature(featureTag, editTab)

@@ -1,50 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="21225" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="22155" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment version="1080" identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="21225"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22155"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="SetPalette">
             <connections>
                 <outlet property="dialog" destination="1" id="QoV-hz-lAN"/>
+                <outlet property="ss01" destination="fn7-o2-fJz" id="dcE-ci-Iy8"/>
+                <outlet property="ss02" destination="BUb-Wr-6yK" id="fVR-oK-pDF"/>
+                <outlet property="ss03" destination="Tbi-hc-59K" id="ujp-FE-JCU"/>
+                <outlet property="ss04" destination="9fL-Fc-yfC" id="nsQ-Ry-PoO"/>
+                <outlet property="ss05" destination="Enw-qX-R9z" id="718-FH-YEc"/>
+                <outlet property="ss06" destination="I7J-ne-ize" id="zXx-Yx-kCi"/>
+                <outlet property="ss07" destination="lIY-mX-w8M" id="A6A-Na-lFC"/>
+                <outlet property="ss08" destination="aya-y4-zDM" id="UB1-Px-J2o"/>
+                <outlet property="ss09" destination="wlM-rz-NX0" id="P5G-WK-0o1"/>
+                <outlet property="ss10" destination="KyF-tN-tcy" id="8yn-wX-ron"/>
+                <outlet property="ss11" destination="a59-f9-iy6" id="6Q5-mz-5DN"/>
+                <outlet property="ss12" destination="Xzg-Xa-GHO" id="bYl-Pd-oAP"/>
+                <outlet property="ss13" destination="6cr-0R-qNT" id="wgt-Xo-EOV"/>
+                <outlet property="ss14" destination="5ua-Mx-1Hq" id="yEU-xd-wdk"/>
+                <outlet property="ss15" destination="Cd2-fI-8SL" id="XmD-XY-ga9"/>
+                <outlet property="ss16" destination="R7d-nd-n6w" id="KEi-HV-irR"/>
+                <outlet property="ss17" destination="O1P-d9-ndh" id="HgT-nZ-v5L"/>
+                <outlet property="ss18" destination="cL8-hS-XPY" id="VPN-yq-SPP"/>
+                <outlet property="ss19" destination="2Fh-xI-hAI" id="Xhn-WC-PT0"/>
+                <outlet property="ss20" destination="emj-95-EnH" id="Wx3-Ez-zdM"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="1" customClass="GSPaletteView">
-            <rect key="frame" x="0.0" y="0.0" width="168" height="138"/>
+            <rect key="frame" x="0.0" y="0.0" width="168" height="133"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xmJ-rn-hjB">
-                    <rect key="frame" x="6" y="122" width="159" height="14"/>
-                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Activate these Stylistic Sets:" id="HCc-E1-WPp">
+                    <rect key="frame" x="6" y="117" width="159" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Stylistic Sets:" id="HCc-E1-WPp">
                         <font key="font" metaFont="smallSystem"/>
                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fn7-o2-fJz">
-                    <rect key="frame" x="7" y="103" width="37" height="16"/>
+                    <rect key="frame" x="7" y="98.5" width="37" height="16"/>
+                    <buttonCell key="cell" type="check" title="01" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="itX-o9-PmQ">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" usesAppearanceFont="YES"/>
+                    </buttonCell>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="249" constant="38" id="R2v-Km-JQ8"/>
                         <constraint firstAttribute="width" relation="lessThanOrEqual" constant="50" id="WdE-Ew-kSw"/>
                     </constraints>
-                    <buttonCell key="cell" type="check" title="01" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="itX-o9-PmQ">
-                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
-                    </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Sl9-f5-6lE"/>
                         <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss01" id="4PP-5T-YqY"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BUb-Wr-6yK">
-                    <rect key="frame" x="7" y="85" width="37" height="16"/>
+                    <rect key="frame" x="7" y="81.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="02" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="l0M-VH-6WC">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="H9e-Xf-Ip6"/>
@@ -52,10 +72,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9fL-Fc-yfC">
-                    <rect key="frame" x="7" y="49" width="37" height="16"/>
+                    <rect key="frame" x="7" y="47.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="04" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="brU-bk-5KV">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="dqv-B9-Qfu"/>
@@ -63,10 +83,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tbi-hc-59K">
-                    <rect key="frame" x="7" y="67" width="37" height="16"/>
+                    <rect key="frame" x="7" y="64.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="03" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="Gyr-OX-rKE">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="nsZ-GE-bCh"/>
@@ -74,10 +94,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Enw-qX-R9z">
-                    <rect key="frame" x="7" y="31" width="37" height="16"/>
+                    <rect key="frame" x="7" y="30.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="05" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="AnJ-d2-qws">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Deb-se-fRr"/>
@@ -85,10 +105,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7J-ne-ize">
-                    <rect key="frame" x="47" y="103" width="36" height="16"/>
+                    <rect key="frame" x="47" y="98.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="06" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="SVT-H0-wCu">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="L4e-YN-Cbh"/>
@@ -96,10 +116,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-mX-w8M">
-                    <rect key="frame" x="47" y="85" width="36" height="16"/>
+                    <rect key="frame" x="47" y="81.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="07" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="MHi-v4-iC8">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Pyh-zq-V4S"/>
@@ -107,10 +127,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wlM-rz-NX0">
-                    <rect key="frame" x="47" y="49" width="36" height="16"/>
+                    <rect key="frame" x="47" y="47.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="09" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="Sl7-4h-U40">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="JcT-fd-XSr"/>
@@ -118,10 +138,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aya-y4-zDM">
-                    <rect key="frame" x="47" y="67" width="36" height="16"/>
+                    <rect key="frame" x="47" y="64.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="08" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="KW5-5d-rR7">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="HHo-wJ-Stf"/>
@@ -129,10 +149,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-tN-tcy">
-                    <rect key="frame" x="47" y="31" width="36" height="16"/>
+                    <rect key="frame" x="47" y="30.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="10" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="qCL-st-efG">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Hqe-WT-bdo"/>
@@ -140,10 +160,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a59-f9-iy6">
-                    <rect key="frame" x="86" y="103" width="37" height="16"/>
+                    <rect key="frame" x="86" y="98.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="11" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="YsT-KM-DoL">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="vEt-Hf-26C"/>
@@ -151,10 +171,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-Xa-GHO">
-                    <rect key="frame" x="86" y="85" width="37" height="16"/>
+                    <rect key="frame" x="86" y="81.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="12" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="3L9-pp-zds">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="mZ9-CW-Q9O"/>
@@ -162,10 +182,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-Mx-1Hq">
-                    <rect key="frame" x="86" y="49" width="37" height="16"/>
+                    <rect key="frame" x="86" y="47.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="14" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="z83-xn-3bs">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="OGW-U9-bwc"/>
@@ -173,10 +193,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-0R-qNT">
-                    <rect key="frame" x="86" y="67" width="37" height="16"/>
+                    <rect key="frame" x="86" y="64.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="13" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="8vI-HL-Vgq">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="BTk-xb-YAG"/>
@@ -184,10 +204,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-fI-8SL">
-                    <rect key="frame" x="86" y="31" width="37" height="16"/>
+                    <rect key="frame" x="86" y="30.5" width="37" height="16"/>
                     <buttonCell key="cell" type="check" title="15" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="XOi-kj-lrK">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="suU-D9-D21"/>
@@ -195,10 +215,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-nd-n6w">
-                    <rect key="frame" x="126" y="103" width="36" height="16"/>
+                    <rect key="frame" x="126" y="98.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="16" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="alO-Fc-X4d">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="6jd-G3-Gdt"/>
@@ -206,10 +226,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O1P-d9-ndh">
-                    <rect key="frame" x="126" y="85" width="36" height="16"/>
+                    <rect key="frame" x="126" y="81.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="17" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="U3W-HC-kbA">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="HUG-YG-VWY"/>
@@ -217,10 +237,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Fh-xI-hAI">
-                    <rect key="frame" x="126" y="49" width="36" height="16"/>
+                    <rect key="frame" x="126" y="47.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="19" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="qaz-Sz-4Nw">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="vOY-Ok-lDF"/>
@@ -228,10 +248,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-hS-XPY">
-                    <rect key="frame" x="126" y="67" width="36" height="16"/>
+                    <rect key="frame" x="126" y="64.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="18" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="AP7-ZZ-ihx">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="wFf-CJ-Au2"/>
@@ -239,10 +259,10 @@
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="emj-95-EnH">
-                    <rect key="frame" x="126" y="31" width="36" height="16"/>
+                    <rect key="frame" x="126" y="30.5" width="36" height="16"/>
                     <buttonCell key="cell" type="check" title="20" bezelStyle="regularSquare" imagePosition="left" alignment="left" controlSize="small" state="on" inset="2" id="NQX-pZ-sn0">
                         <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                        <font key="font" metaFont="smallSystem"/>
+                        <font key="font" usesAppearanceFont="YES"/>
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="kGh-NQ-QBZ"/>
