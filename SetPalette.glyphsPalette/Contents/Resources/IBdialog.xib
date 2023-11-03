@@ -9,26 +9,6 @@
         <customObject id="-2" userLabel="File's Owner" customClass="SetPalette">
             <connections>
                 <outlet property="dialog" destination="1" id="QoV-hz-lAN"/>
-                <outlet property="ss01" destination="fn7-o2-fJz" id="dcE-ci-Iy8"/>
-                <outlet property="ss02" destination="BUb-Wr-6yK" id="fVR-oK-pDF"/>
-                <outlet property="ss03" destination="Tbi-hc-59K" id="ujp-FE-JCU"/>
-                <outlet property="ss04" destination="9fL-Fc-yfC" id="nsQ-Ry-PoO"/>
-                <outlet property="ss05" destination="Enw-qX-R9z" id="718-FH-YEc"/>
-                <outlet property="ss06" destination="I7J-ne-ize" id="zXx-Yx-kCi"/>
-                <outlet property="ss07" destination="lIY-mX-w8M" id="A6A-Na-lFC"/>
-                <outlet property="ss08" destination="aya-y4-zDM" id="UB1-Px-J2o"/>
-                <outlet property="ss09" destination="wlM-rz-NX0" id="P5G-WK-0o1"/>
-                <outlet property="ss10" destination="KyF-tN-tcy" id="8yn-wX-ron"/>
-                <outlet property="ss11" destination="a59-f9-iy6" id="6Q5-mz-5DN"/>
-                <outlet property="ss12" destination="Xzg-Xa-GHO" id="bYl-Pd-oAP"/>
-                <outlet property="ss13" destination="6cr-0R-qNT" id="wgt-Xo-EOV"/>
-                <outlet property="ss14" destination="5ua-Mx-1Hq" id="yEU-xd-wdk"/>
-                <outlet property="ss15" destination="Cd2-fI-8SL" id="XmD-XY-ga9"/>
-                <outlet property="ss16" destination="R7d-nd-n6w" id="KEi-HV-irR"/>
-                <outlet property="ss17" destination="O1P-d9-ndh" id="HgT-nZ-v5L"/>
-                <outlet property="ss18" destination="cL8-hS-XPY" id="VPN-yq-SPP"/>
-                <outlet property="ss19" destination="2Fh-xI-hAI" id="Xhn-WC-PT0"/>
-                <outlet property="ss20" destination="emj-95-EnH" id="Wx3-Ez-zdM"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>

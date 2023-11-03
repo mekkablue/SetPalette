@@ -21,27 +21,7 @@ class SetPalette (PalettePlugin):
 	prefID = "com.mekkablue.SetPalette"
 	
 	dialog = objc.IBOutlet()
-	ss01 = objc.IBOutlet()
-	ss02 = objc.IBOutlet()
-	ss03 = objc.IBOutlet()
-	ss04 = objc.IBOutlet()
-	ss05 = objc.IBOutlet()
-	ss06 = objc.IBOutlet()
-	ss07 = objc.IBOutlet()
-	ss08 = objc.IBOutlet()
-	ss09 = objc.IBOutlet()
-	ss10 = objc.IBOutlet()
-	ss11 = objc.IBOutlet()
-	ss12 = objc.IBOutlet()
-	ss13 = objc.IBOutlet()
-	ss14 = objc.IBOutlet()
-	ss15 = objc.IBOutlet()
-	ss16 = objc.IBOutlet()
-	ss17 = objc.IBOutlet()
-	ss18 = objc.IBOutlet()
-	ss19 = objc.IBOutlet()
-	ss20 = objc.IBOutlet()
-	
+
 	@objc.python_method
 	def settings(self):
 		self.name = Glyphs.localize({
@@ -95,8 +75,6 @@ class SetPalette (PalettePlugin):
 		for i in range(20):
 			featureTag = self.ssXX(i+1)
 			Glyphs.defaults[self.domain(featureTag)] = onOff
-			button = getattr(self, featureTag)
-			button.setState_(onOff)
 		self.updateFeatures()
 	
 	@objc.IBAction
@@ -111,8 +89,6 @@ class SetPalette (PalettePlugin):
 			for i in range(20):
 				featureTag = self.ssXX(i+1)
 				value = self.pref(featureTag)
-				button = getattr(self, featureTag)
-				button.setState_(value)
 				if value == 0:
 					self.deactivateFeature(featureTag, editTab)
 				else:
