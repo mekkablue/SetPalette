@@ -75,7 +75,7 @@ class SetPalette (PalettePlugin):
 
 	@objc.python_method
 	def switchAll(self, onOff=1):
-		for i in range(20):
+		for i in range(21):
 			self.setPref(i, onOff)
 		self.updateFeatures()
 
@@ -88,7 +88,7 @@ class SetPalette (PalettePlugin):
 		font = Glyphs.font
 		editTab = font.currentTab
 		if editTab:
-			for i in range(20):
+			for i in range(21):
 				featureTag = self.featureTag(i)
 				if self.getPref(i) == 0:
 					self.deactivateFeature(featureTag, editTab)
