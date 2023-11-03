@@ -37,7 +37,7 @@
                     </constraints>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Sl9-f5-6lE"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss01" id="4PP-5T-YqY"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss01" id="4PP-5T-YqY"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="BUb-Wr-6yK">
@@ -48,7 +48,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="H9e-Xf-Ip6"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss02" id="peU-pp-5iM"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss02" id="peU-pp-5iM"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9fL-Fc-yfC">
@@ -59,7 +59,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="dqv-B9-Qfu"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss04" id="6Iu-RK-az7"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss04" id="6Iu-RK-az7"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tbi-hc-59K">
@@ -70,7 +70,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="nsZ-GE-bCh"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss03" id="8O6-J0-KCf"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss03" id="8O6-J0-KCf"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Enw-qX-R9z">
@@ -81,7 +81,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Deb-se-fRr"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss05" id="sAt-pl-qtI"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss05" id="sAt-pl-qtI"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="I7J-ne-ize">
@@ -92,7 +92,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="L4e-YN-Cbh"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss06" id="bPG-Xb-gG3"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss06" id="bPG-Xb-gG3"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lIY-mX-w8M">
@@ -103,7 +103,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Pyh-zq-V4S"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss07" id="cXt-Vi-NRj"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss07" id="cXt-Vi-NRj"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="wlM-rz-NX0">
@@ -114,7 +114,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="JcT-fd-XSr"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss09" id="yKk-Dn-z9p"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss09" id="yKk-Dn-z9p"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aya-y4-zDM">
@@ -125,7 +125,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="HHo-wJ-Stf"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss08" id="Mik-Xy-bXP"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss08" id="Mik-Xy-bXP"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KyF-tN-tcy">
@@ -136,7 +136,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="Hqe-WT-bdo"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss10" id="KSJ-L2-xM1"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss10" id="KSJ-L2-xM1"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="a59-f9-iy6">
@@ -147,7 +147,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="vEt-Hf-26C"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss11" id="5X7-SN-zwj"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss11" id="5X7-SN-zwj"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Xzg-Xa-GHO">
@@ -158,7 +158,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="mZ9-CW-Q9O"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss12" id="dN1-g9-uN6"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss12" id="dN1-g9-uN6"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5ua-Mx-1Hq">
@@ -169,7 +169,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="OGW-U9-bwc"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss14" id="4l3-YM-eeg"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss14" id="4l3-YM-eeg"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="6cr-0R-qNT">
@@ -180,7 +180,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="BTk-xb-YAG"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss13" id="lnd-bZ-Ae9"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss13" id="lnd-bZ-Ae9"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Cd2-fI-8SL">
@@ -191,7 +191,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="suU-D9-D21"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss15" id="C41-g1-zCC"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss15" id="C41-g1-zCC"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="R7d-nd-n6w">
@@ -202,7 +202,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="6jd-G3-Gdt"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss16" id="65M-ja-jDM"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss16" id="65M-ja-jDM"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="O1P-d9-ndh">
@@ -213,7 +213,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="HUG-YG-VWY"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss17" id="tWV-c4-8fN"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss17" id="tWV-c4-8fN"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Fh-xI-hAI">
@@ -224,7 +224,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="vOY-Ok-lDF"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss19" id="KaD-Ep-iAE"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss19" id="KaD-Ep-iAE"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cL8-hS-XPY">
@@ -235,7 +235,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="wFf-CJ-Au2"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss18" id="VPc-Z9-O0v"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss18" id="VPc-Z9-O0v"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="emj-95-EnH">
@@ -246,7 +246,7 @@
                     </buttonCell>
                     <connections>
                         <action selector="setStylisticSet:" target="-2" id="kGh-NQ-QBZ"/>
-                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com.mekkablue.SetPalette.ss20" id="8C2-jE-psn"/>
+                        <binding destination="znZ-Ki-wIj" name="value" keyPath="values.com_mekkablue_SetPalette_ss20" id="8C2-jE-psn"/>
                     </connections>
                 </button>
                 <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-Wt-s5x">

@@ -18,8 +18,8 @@ from GlyphsApp.plugins import *
 import traceback
 
 class SetPalette (PalettePlugin):
-	prefID = "com.mekkablue.SetPalette"
-	
+	prefID = "com_mekkablue_SetPalette"
+
 	dialog = objc.IBOutlet()
 
 	@objc.python_method
@@ -32,15 +32,23 @@ class SetPalette (PalettePlugin):
 		self.loadNib('IBdialog', __file__)
 
 	@objc.python_method
-	def domain(self, prefName):
-		prefName = prefName.strip().strip(".")
-		return self.prefID + "." + prefName.strip()
-	
+	def featureTag(self, featureIdx):
+		return f"ss{featureIdx:02}"
+
 	@objc.python_method
-	def pref(self, prefName):
-		prefDomain = self.domain(prefName)
-		return Glyphs.defaults[prefDomain]
-	
+	def prefKey(self, featureIdx):
+		return self.prefID + "_" + self.featureTag(featureIdx)
+
+	@objc.python_method
+	def getPref(self, featureIdx):
+		prefKey = self.prefKey(featureIdx)
+		return Glyphs.defaults[prefKey]
+
+	@objc.python_method
+	def setPref(self, featureIdx, value):
+		prefKey = self.prefKey(featureIdx)
+		Glyphs.defaults[prefKey] = value
+
 	@objc.python_method
 	def start(self):
 		pass
@@ -50,9 +58,8 @@ class SetPalette (PalettePlugin):
 		editTab = Glyphs.font.currentTab
 		if editTab:
 			setNumber = int(sender.title())
-			featureTag = self.ssXX(setNumber)
-			setPref = self.domain(featureTag)
-			if Glyphs.defaults[setPref]:
+			featureTag = self.featureTag(setNumber)
+			if self.getPref(setNumber):
 				self.activateFeature(featureTag, editTab)
 			else:
 				self.deactivateFeature(featureTag, editTab)
@@ -65,16 +72,11 @@ class SetPalette (PalettePlugin):
 	@objc.IBAction
 	def allOff_(self, sender):
 		self.switchAll(onOff=0)
-	
-	@objc.python_method
-	def ssXX(self, setNumber):
-		return f"ss{setNumber:02}"
-	
+
 	@objc.python_method
 	def switchAll(self, onOff=1):
 		for i in range(20):
-			featureTag = self.ssXX(i+1)
-			Glyphs.defaults[self.domain(featureTag)] = onOff
+			self.setPref(i, onOff)
 		self.updateFeatures()
 
 	@objc.IBAction
@@ -87,9 +89,8 @@ class SetPalette (PalettePlugin):
 		editTab = font.currentTab
 		if editTab:
 			for i in range(20):
-				featureTag = self.ssXX(i+1)
-				value = self.pref(featureTag)
-				if value == 0:
+				featureTag = self.featureTag(i)
+				if self.getPref(i) == 0:
 					self.deactivateFeature(featureTag, editTab)
 				else:
 					self.activateFeature(featureTag, editTab)
