@@ -30,7 +30,7 @@ class SetPalette (PalettePlugin):
 		})
 		self.dialogName = self.name
 		self.loadNib('IBdialog', __file__)
-	
+
 	@objc.python_method
 	def domain(self, prefName):
 		prefName = prefName.strip().strip(".")
@@ -57,11 +57,11 @@ class SetPalette (PalettePlugin):
 			else:
 				self.deactivateFeature(featureTag, editTab)
 			self.updateTab(editTab)
-	
+
 	@objc.IBAction
 	def allOn_(self, sender):
 		self.switchAll(onOff=1)
-	
+
 	@objc.IBAction
 	def allOff_(self, sender):
 		self.switchAll(onOff=0)
@@ -76,11 +76,11 @@ class SetPalette (PalettePlugin):
 			featureTag = self.ssXX(i+1)
 			Glyphs.defaults[self.domain(featureTag)] = onOff
 		self.updateFeatures()
-	
+
 	@objc.IBAction
 	def applySets_(self, sender):
 		self.updateFeatures()
-	
+
 	@objc.python_method
 	def updateFeatures(self):
 		font = Glyphs.font
@@ -94,14 +94,14 @@ class SetPalette (PalettePlugin):
 				else:
 					self.activateFeature(featureTag, editTab)
 			self.updateTab(editTab)
-	
+
 	@objc.python_method
 	def updateTab(self, editTab):
 		editTab.graphicView().reflow()
 		editTab.graphicView().layoutManager().updateActiveLayer()
 		editTab._updateFeaturePopup()
 		editTab.updatePreview()
-	
+
 	@objc.python_method
 	def activateFeature(self, featureTag, editTab):
 		try:
@@ -113,7 +113,7 @@ class SetPalette (PalettePlugin):
 			print(e)
 			print(traceback.format_exc())
 			return False
-	
+
 	@objc.python_method
 	def deactivateFeature(self, featureTag, editTab):
 		try:
@@ -125,7 +125,7 @@ class SetPalette (PalettePlugin):
 			print(e)
 			print(traceback.format_exc())
 			return False
-	
+
 	@objc.python_method
 	def __file__(self):
 		"""Please leave this method unchanged"""
